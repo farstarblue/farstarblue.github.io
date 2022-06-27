@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-06-27 Mon 15:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="outline-container-org6cf99e4" class="outline-2">
+<h2 id="org6cf99e4"><span class="section-number-2">1.</span> 第一章: 通信网络概论数学基础</h2>
+<div class="outline-text-2" id="text-1">
+<ol class="org-ol">
+<li>通信网络的组成: 用户通信终端, 通道, 网络节点</li>
+<li><code>网络节点</code>
+<ol class="org-ol">
+<li>例子: 交换机或路由器</li>
+<li>功能: 从通道中分离出用户信息, 或将用户信息接入到通道中</li>
+</ol></li>
+<li>通信网类型: 民用通信网, 军用通信网, 局域网</li>
+<li>网络互联的 <code>核心设备</code>: 路由器</li>
+<li><code>路由器功能</code>: 寻径, 转发
+<ol class="org-ol">
+<li>寻径: 维持和更新路由表</li>
+<li>转发: 把分组发送到正确的目的地</li>
+</ol></li>
+<li>路由器和交换机的区别: 路由器可连接 <code>使用不同物理传输媒介, 有不同传输协议的物理链路</code></li>
+<li>数据传输链路:
+<ol class="org-ol">
+<li><code>接入链路</code>: 用户到网络节点, 如: 局域网链路, 移动通信链路</li>
+<li><code>网络链路</code>: 网络节点到网络节点, 如: 帧中继, WDM</li>
+</ol></li>
+<li>数据传输网络功能: 在网络节点运输分组时选择合适链路, 使分组迅速可靠传输</li>
+<li>分组交换网特点:
+<ol class="org-ol">
+<li>把消息分成分组来进行运输</li>
+<li>每个分组都是比特串, 都有分组头</li>
+<li>分组头有目的节点地址等网络控制信息</li>
+<li>网络节点通过存储转发方式来进行分组交换</li>
+</ol></li>
+<li>ATM 网络特点:
+<ol class="org-ol">
+<li>采用统一固定的长度信元进行传输交换</li>
+<li>可以用硬件电路处理, 缩短处理时间</li>
+<li>提供 A, B, C, D 四种类型服务</li>
+</ol></li>
+<li>虚电路: 一种分组传输时的路由方式.
+<ol class="org-ol">
+<li>特点: 会话开始时, 确定一条从源节点到目的节点的逻辑链路, 在实际分组传输时才占用物理链路, 其余时间不占用物理链路, 会话过程中所有分组都占用这条链路.</li>
+<li>与传统电话交换网的区别: 传统电话交换网无论有没有数据传输, 都占有物理链路</li>
+</ol></li>
+<li>全网互联的基本条件: 全网统一编址, 路由算法</li>
+<li><p>
+OSI 模型与 TCP/IP 模型
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">OSI 模型</td>
+<td class="org-left">TCP/IP 模型</td>
+</tr>
+
+<tr>
+<td class="org-left">应用层</td>
+<td class="org-left">应用层</td>
+</tr>
+
+<tr>
+<td class="org-left">表示层</td>
+<td class="org-left">应用层</td>
+</tr>
+
+<tr>
+<td class="org-left">会话层</td>
+<td class="org-left">应用层</td>
+</tr>
+
+<tr>
+<td class="org-left">运输层</td>
+<td class="org-left">运输层</td>
+</tr>
+
+<tr>
+<td class="org-left">网络层</td>
+<td class="org-left">互联网层</td>
+</tr>
+
+<tr>
+<td class="org-left">数据链路层</td>
+<td class="org-left">网络接入层</td>
+</tr>
+
+<tr>
+<td class="org-left">物理层</td>
+<td class="org-left">硬件</td>
+</tr>
+</tbody>
+</table></li>
+<li>树: 不包括回路的连通图</li>
+<li>生成树: 这个概念是相对于图来说的, 包含了图中的所有节点的树, 称为生成树</li>
+<li>最小生成树: 边的重量之和最小的生成树, 重量在通信网络中是指成本或时延</li>
+<li>利用 P-D 算法和 K 算法找出最小重量生成树, P-D 算法是随机取一个点, 从这个点开始延伸到另一个点, K 算法是先把所有点找出来, 然后再按照重量逐步画出边, 注意生成树是没有环路的</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org7905078" class="outline-2">
+<h2 id="org7905078"><span class="section-number-2">2.</span> 第二章: 端到端的传输协议</h2>
+<div class="outline-text-2" id="text-2">
+<ol class="org-ol">
+<li>组帧方式: 面向字符, 面向比特, 采用长度计数, 其中采用长度计数的组帧方式开销最小</li>
+<li>循环冗余校验 CRC: \(C(D) = \frac{S(D) D^L}{g(D)}\), 注意是模 2 运算
+<ol class="org-ol">
+<li>CRC-16: \(g(D) = D^{16} + D^{15} + D^{2} + 1\)</li>
+<li>CRC-CCITT: \(g(D) = D^{16} + D^{12} + D^5 + 1\)</li>
+</ol></li>
+<li>在发现传输帧错误时, 处理办法: ARQ(收端请求发端重发)</li>
+<li>四种ARQ 重传协议形式: 停等式 ARQ, 返回 n - ARQ, 选择重发 ARQ, ARPANET ARQ</li>
+<li>数据链路控制协议 HDLC 的三种工作模式:
+<ol class="org-ol">
+<li>正常响应模式: 主从模式</li>
+<li>异步响应模式: 主从模式</li>
+<li>异步平衡模式: 全双工点对点, 这是应用最广泛的协议</li>
+</ol></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge111095" class="outline-2">
+<h2 id="orge111095"><span class="section-number-2">3.</span> 第三章: 网络时延分析</h2>
+<div class="outline-text-2" id="text-3">
+<ol class="org-ol">
+<li>网络时延四个部分: 处理时延, 排队时延, 传输时延, 传播时延</li>
+<li>传输时延和传播时延: 传输时延是在发送分组, 传播时延是在通信链路上</li>
+<li>M/M/m 排队系统表示方法:
+<ol class="org-ol">
+<li>第一个字母: 到达过程的特征, M 表示无记忆的泊松过程</li>
+<li>第二个字母: 服务时间的概率分布
+<ol class="org-ol">
+<li>M: 指数分布</li>
+<li>G: 一般分布</li>
+<li>D: 确定性分布</li>
+</ol></li>
+<li>第三个字母: 服务员个数</li>
+<li>第四个字母: 系统容量大小, 如果没有第四个字母, 说明系统容量无限大</li>
+<li>例如: M/M/1, M/M/m, M/M/无穷, M/M/m/m</li>
+</ol></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org02833cb" class="outline-2">
+<h2 id="org02833cb"><span class="section-number-2">4.</span> 第四章: 多址协议概述</h2>
+<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li>纯 ALOHA系统的最大系统通过率为 \(\frac{1}{2e}\), 而时隙 ALOHA 系统的最大系统通过率为 \(\frac{1}{e}\)</li>
+<li>共享链路的系统和网络举例: 局域网, 卫星通信系统, 蜂窝移动通信系统</li>
+<li>多址接入协议: 一个网络中, 多个用户高效共享物理链路</li>
+<li>多址协议的分类:
+<ol class="org-ol">
+<li>固定分配多址协议: 用户接入信道时, 专门分配信道资源, 直到通信结束, 也称为 <code>无冲突的多址协议</code>, 因为不会发生多个用户冲突, 如: <code>频分多址(FDMA), 时分多址(TDMA), 码分多址(CDMA), 空分多址(SDMA)</code></li>
+<li>随机多址协议: 用户随机接入信道, 而不顾及其他用户, 在信道资源使用上有可能发生冲突碰撞. 如: <code>完全随机的多址接入协议(ALOHA), 基于载波监听的多址协议(CSMA)</code></li>
+<li>基于预约的多址协议: 在数据分组传输前, 先资源预约, 预约后, 才能无冲突的传输. 如: <code>基于分组的预约多址协议(PRMA)</code></li>
+</ol></li>
+<li>固定多址接入协议的优缺点: 可以保证每个用户间的公平性, 以及数据的平均时延, 但对于突发性数据业务的传输, 往往会有较大时延, 已分配信道的用户没有通信, 则产生资源浪费, 若信道资源已分配完成, 则新用户无法通信</li>
+<li>随机多址协议的问题:
+<ol class="org-ol">
+<li>系统吞吐量和时延性能</li>
+<li>系统稳定性</li>
+</ol></li>
+<li>CSMA 协议不同实现形式:
+<ol class="org-ol">
+<li>非坚持型 CSMA: 当信道空闲, 发送分组; 若信道忙碌, 则在一定延迟后若信道空闲, 则发送分组, 若依旧忙碌, 则依旧一定延迟, 如此循环</li>
+<li>1 - 坚持型 CSMA: 若信道忙碌, 则一直监测信道状态, 直到信道空闲, 再发送</li>
+<li>p - 坚持型 CSMA: 若信道忙碌, 则一直监测信道状态, 直到信道空闲, 再以 p 的概率发送分组</li>
+</ol></li>
+<li>(CSMA/CD): 有碰撞监测的载波监听型多址协议, 它比普通 CSMA 的规则增加了三点:
+<ol class="org-ol">
+<li>边说边听: 节点在发送数据帧时要保持侦听信道碰撞情况</li>
+<li>强化干扰: 监测到碰撞并停止发送后, 立即发送一小段强化干扰信号, 增强碰撞检测效果</li>
+<li>碰撞检测窗口: 完整发送数据帧后, 停顿一段时间(两倍最大传播时延)来监听信道, 若停顿时未发生碰撞, 则说明发送成功, 停顿的时间称为碰撞检测窗口</li>
+</ol></li>
+<li>(CSMA/CA): 有冲突避免的载波监听多址接入协议, 因为一台无线设备在同一个信道上同时发送和接受, 所以无法采用碰撞检测, 只能用冲突避免来减少冲突</li>
+<li>冲突分解: 若发生碰撞, 则让新到达的分组等待, 直到参与碰撞的分组成功传输后, 再让新分组传输</li>
+<li>冲突分解算法有: 树形分裂算法和先到先服务算法(FCFS)</li>
+<li>与 ALOHA 系统相比, 为什么 CSMA 系统有可能获得更高的系统吞吐率?
+<ol class="org-ol">
+<li>CSMA 是 ALOHA 的改进, 采用了附加的硬件装置, 每个节点都能检测到信道上有无分组在传输, 进而确定信道状态, 然后再决定分组是否发送, 减少碰撞</li>
+</ol></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org68f29d0" class="outline-2">
+<h2 id="org68f29d0"><span class="section-number-2">5.</span> 第五章: 路由算法</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li>路由算法是网络层的核心问题
+<ol class="org-ol">
+<li>主要功能: 指引分组通过通信子网到达目的节点, 包括以下两个功能
+<ol class="org-ol">
+<li>选择一条传输路径</li>
+<li>将用户消息送达目的节点</li>
+</ol></li>
+</ol></li>
+<li>若子网采用 <code>数据报</code> 传输, 则每个分组都要做路由选择, 若采用 <code>虚电路</code>, 则仅需要在建立虚电路时作路由选择</li>
+<li>理想的路由算法的特点:
+<ol class="org-ol">
+<li>正确性: 分组一定能到达目的节点</li>
+<li>计算简单: 最少的运行资源</li>
+<li>自适应性: 能随着网络业务和拓扑变化,</li>
+<li>稳定性: 若拓扑变化, 不会在某几条链路中选择来回变化, 而是稳定的选择一条链路</li>
+<li>公平性: 每个用户都是等同的</li>
+<li>最优性: 提供最佳路由</li>
+</ol></li>
+<li>为什么无法做到理想路由? 因为这些要求有的是矛盾的</li>
+<li>常用的路由算法一般在三种网络下进行: 广域网, 互联网, Ad-Hoc 网</li>
+<li>广域网中的路由算法分为: 广播, 最短路由, 最佳路由</li>
+<li>最短路由: 关心一对节点的一条路径选择和求解</li>
+<li>最佳路由: 从全网范围寻找所有可能的路径, 使的时延最小, 流量最大, 而不是局限于一条最短路径</li>
+<li>最短路由构造方法有: B-F 算法, D 算法, F-W 算法, 它们都是通过迭代的方式, 但是迭代的内容不同
+<ol class="org-ol">
+<li>B-F 算法迭代的是 <code>路径中的链路数</code></li>
+<li>D 算法迭代的是 <code>路径长度</code></li>
+<li>F-W 算法迭代的是 <code>路径中间节点</code></li>
+</ol></li>
+<li>链路状态路由算法基本步骤:
+<ol class="org-ol">
+<li>发现邻节点, 获取它们地址</li>
+<li>测量到达每个邻节点的时延或成本</li>
+<li>构造一个分组来通告他所知道的所有路由信息</li>
+<li>发生分组到所有其他节点</li>
+<li>计算到所有其他节点的最短路径</li>
+</ol></li>
+<li>距离矢量算法为什么会出现计数至无穷的问题? 如何解决?
+<ol class="org-ol">
+<li>因为它对好消息反应迅速, 对坏消息反应迟钝, 可以将无穷大设置为网络时延跳数加一</li>
+</ol></li>
+<li>链路状态路由比距离矢量算法的优点: 距离适量算法时延的度量是队列的长度, 没有考虑链路带宽的增长, 距离时延算法收敛速度慢</li>
+<li>路由算法的分类中, 确定型和自适应型是在什么意义上的? 是在路由选择算法能否随网络业务量或拓扑变化来自适应的调整来划分</li>
+<li>广域网路由是解决一个子网的路由, 互联网路由是解决不同子网之间的路由</li>
+<li>泛洪算法: 也叫扩散式算法, 每个节点都向邻节点发送拓扑更新消息, 如此循环</li>
+<li>ARPANET 泛洪算法
+<ol class="org-ol">
+<li>能防止拓扑更新信息在网络中无限循环</li>
+<li>防止序号出错带来的影响</li>
+</ol></li>
+<li>ARPANET 采用两个机制来防止序号出错的影响, 
+<ol class="org-ol">
+<li>每个更新消息包括一个年龄域, 表面消息在网络中传播时间</li>
+<li>每个节点除了要在链路状态发生变化时发送拓扑更新信息, 还要周期性的发送拓扑更新信息, 至少每 60s 发送一次</li>
+</ol></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-06-27 Mon 15:56</p>
+</div>
+</body>
+</html>
